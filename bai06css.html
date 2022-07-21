@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssbai6.css">
+    <link rel="shortcut icon" href="tgdđ-removebg-preview.png">
+    <title>Thế Giới Di Động</title>
+    <script>
+        function doiAnh(obj) {
+        var im = document.getElementById("mainImg");
+        im.src = obj.src;
+      }
+        function doiAnhblue(prefix) {
+            var im = document.getElementById("mainImg");
+        im.src = `Blue_1.jpg`;
+
+        var images = document.querySelectorAll(".anhcon img");
+        for (var i = 0; i < images.length; i++)
+          images[i].src = `Blue_${i + 1}.jpg`;
+      }
+      function doiAnhblack(prefix) {
+            var im = document.getElementById("mainImg");
+        im.src = `Black_1.jpg`;
+
+        var images = document.querySelectorAll(".anhcon img");
+        for (var i = 0; i < images.length; i++)
+          images[i].src = `Black_${i + 1}.jpg`;
+      }
+      function doiAnhsilver(prefix) {
+            var im = document.getElementById("mainImg");
+        im.src = `Silver_1.jpg`;
+
+        var images = document.querySelectorAll(".anhcon img");
+        for (var i = 0; i < images.length; i++)
+          images[i].src = `Silver_${i + 1}.jpg`;
+      }
+      function doiAnhgold(prefix) {
+            var im = document.getElementById("mainImg");
+        im.src = `Gold_1.jpg`;
+
+        var images = document.querySelectorAll(".anhcon img");
+        for (var i = 0; i < images.length; i++)
+          images[i].src = `Gold_${i + 1}.jpg`;
+      }
+      function doigiatienblack(obj) {
+        let text = document.getElementById("black").innerText;
+        document.getElementById("doinoidung").innerHTML = text;
+      }
+      function doigiatienblue() {
+        let text = document.getElementById("blue").innerText;
+        document.getElementById("doinoidung").innerHTML = text;
+      }
+      function doigiatiengold(obj) {
+        let text = document.getElementById("gold").innerText;
+        document.getElementById("doinoidung").innerHTML = text;
+      }
+      function doigiatiensilver(obj) {
+        let text = document.getElementById("silver").innerText;
+        document.getElementById("doinoidung").innerHTML = text;
+      }
+    </script>
+</head>
+<body>
+    <nav class="menu flex">
+        <li><a href="$">Trang chủ</a></li>
+        <li><a href="$">Điện thoại</a></li>
+        <li><a href="$">Máy tính bảng</a></li>
+        <li><a href="$">Laptop</a></li>
+    </nav>
+    <section class="items">
+        <div class="item">
+            <div>
+                <img onclick="doiAnhblack(this); doigiatienblack(this)" src="Black_1.jpg" alt="dien thoai den">
+            </div>
+            <p>Samsung galaxy Note 8</p>
+            <span class="tien" id="black">15.000.000<sup>đ</sup></span>
+        </div>
+        <div class="item">
+            <div>
+                <img onclick="doiAnhblue(this); doigiatienblue()" src="Blue_1.jpg" alt="dien thoai den">
+            </div>
+            <p>Samsung galaxy Note 8</p>
+            <span class="tien" id="blue">21.000.000<sup>đ</sup></span>
+        </div>
+        <div class="item">
+            <div>
+                <img onclick="doiAnhgold(this); doigiatiengold(this)" src="Gold_3.jpg" alt="dien thoai den">
+            </div>
+            <p>Samsung galaxy Note 8</p>
+            <span class="tien" id="gold">18.999.000<sup>đ</sup></span>
+        </div>
+        <div class="item">
+            <div>
+                <img onclick="doiAnhsilver(this); doigiatiensilver(this)" src="Silver_3.jpg" alt="dien thoai den">
+            </div>
+            <p>Samsung galaxy Note 8</p>
+            <span class="tien" id="silver">6.999.000<sup>đ</sup></span>
+        </div>
+    </section>
+    <section id="sec2" class="flex">
+        <div class="anhhienthi">
+            <img id="mainImg" src="Black_1.jpg" alt="dientoha">
+            <div class="anhcon flex">
+                <img onclick="doiAnh(this)" src="Black_2.jpg" alt="dientoha">
+                <img onclick="doiAnh(this)" src="Black_3.jpg" alt="dientoha">
+                <img onclick="doiAnh(this)" src="Black_4.jpg" alt="dientoha">
+                <img onclick="doiAnh(this)" src="Black_5.jpg" alt="dientoha">
+            </div>
+        </div>
+        <div class="Thongtin">
+            <h1 id="doinoidung">15.000.000<sup>đ</sup></h1>
+            <div class="border1">
+                <h2>Khuyến mãi</h2>
+        
+                    <li>Bảo hành chính hãng điện thoại 1 năm tại các trung tâm bảo hành hãng Xem địa chỉ bảo hành</li>
+                    <li>Hư gì đổi nấy 12 tháng tại 3221 siêu thị toàn quốc (miễn phí tháng đầu)</li>
+            </div>
+            <div class="border2">
+                <h2>Mua online tặng thêm</h2>
+                <p>Phiếu mua hàng samsung trị giá <span>280.000đ</span>khi mua online</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Khoa CNTT- Đại học Mở Tp.HCM
+    </footer>
+</body>
+</html>
